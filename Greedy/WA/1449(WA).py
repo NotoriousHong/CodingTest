@@ -17,21 +17,10 @@ distance = 0
 result = 1
 i = 1
 
-while i < len(sorted_leak_location):
-
-    distance += sorted_leak_location[i] - sorted_leak_location[i-1]
-
-    # distance = 3
-    # i = 3
-
-    if distance >= l:
-        result += 1
-        distance = 0
-    i += 1
-
 
 while i < len(sorted_leak_location):
 
+    # 잘못된 scope, 이렇게 적어주면 마지막 i index에서 if문에 걸리지 않고 while문을 탈출하게 됨
     if distance <= l:
         distance += sorted_leak_location[i] - sorted_leak_location[i-1]
 
@@ -40,7 +29,6 @@ while i < len(sorted_leak_location):
         #         result += 1
         #         distance = 0
 
-    # 잘못된 scope
     else:
         result += 1
         distance = 0
