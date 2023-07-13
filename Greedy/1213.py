@@ -30,7 +30,6 @@ for item in sorted_alpha:
             break
     if not found:
         divided_alpha.append([item])
-# print(divided_alpha)
 
 flag = False
 # odd count하고 1초과 시 I'm sorry Hansoo 출력
@@ -44,7 +43,6 @@ for sublist in divided_alpha:
         odd_list.append(sublist)
     else:
         even_list.append(sublist)
-# print(even_list, odd_list)
 
 result = ""
 half_even = ""
